@@ -22,7 +22,7 @@
             <span class="text-green">CI</span>
         </h1>
         <nav>
-            <a href="#services" class="mx-2 sm:mx-4 hover:text-yellow transition">Services</a>
+            <button onclick="Typebot.open()" class="mx-2 sm:mx-4 hover:text-yellow transition cursor-pointer">Transfert d'unités</button>
             <a href="#gerants" class="mx-2 sm:mx-4 hover:text-orange transition">Espace Gérants</a>
         </nav>
     </header>
@@ -37,9 +37,11 @@
                 Recevez directement vos crédits sur votre téléphone, sans vous déplacer et sans frais supplémentaires.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="https://typebot.co/chapexraca-reel-transfert-d-unite-supabase-avec-auth-2-pxeioqo" target="_blank" class="bg-orange hover:bg-opacity-90 text-gray-950 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                <!-- Bouton qui ouvre directement la bulle Typebot -->
+                <button onclick="Typebot.open()" class="bg-orange hover:bg-opacity-90 text-gray-950 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1 cursor-pointer">
                     Effectuer un transfert
-                </a>
+                </button>
+                <!-- Bouton qui redirige vers la page gérant -->
                 <a href="https://typebot.co/enregistreur-de-gerant-chapchap-2-ah68937" target="_blank" class="bg-green hover:bg-opacity-90 text-gray-950 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
                     Devenir Gérant
                 </a>
@@ -56,9 +58,9 @@
                             <h4 class="text-2xl font-bold mb-4 text-orange">Transfert d'Unités Instantané</h4>
                             <p class="text-gray-300 mb-6">Rechargez votre téléphone directement depuis chez vous. Simple, rapide et disponible à tout moment !</p>
                         </div>
-                        <a href="https://typebot.co/chapexraca-reel-transfert-d-unite-supabase-avec-auth-2-pxeioqo" target="_blank" class="bg-orange text-gray-950 font-bold py-3 px-6 rounded-lg text-center hover:bg-opacity-90 transition">
+                        <button onclick="Typebot.open()" class="bg-orange text-gray-950 font-bold py-3 px-6 rounded-lg text-center hover:bg-opacity-90 transition cursor-pointer">
                             Lancer le transfert
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -82,7 +84,7 @@
         &copy; 2026 Allô Services CI. Tous droits réservés.
     </footer>
 
-    <!-- Intégration Bulle Typebot (Transfert d'Unités) -->
+    <!-- Script de la bulle Typebot + Fonction de déclenchement -->
     <script type="module">
       import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
 
