@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="bg-gray-950 text-white font-sans">
+<html lang="fr" class="bg-gray-950 text-white font-sans scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,60 +15,71 @@
     </style>
 </head>
 <body>
-    <header class="flex justify-between items-center p-6 border-b border-gray-800">
+    <header class="flex justify-between items-center p-6 border-b border-gray-800 sticky top-0 bg-gray-950/90 backdrop-blur-md z-50">
         <h1 class="text-2xl font-bold">
             <span class="text-yellow">Allô</span>
             <span class="text-orange">Services</span>
             <span class="text-green">CI</span>
         </h1>
         <nav>
-            <a href="#services" class="mx-4 hover:text-yellow">Services</a>
-            <a href="#gerants" class="mx-4 hover:text-orange">Espace Gérants</a>
+            <a href="#services" class="mx-2 sm:mx-4 hover:text-yellow transition">Services</a>
+            <a href="#gerants" class="mx-2 sm:mx-4 hover:text-orange transition">Espace Gérants</a>
         </nav>
     </header>
 
     <main>
-        <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 to-gray-950 px-4">
-            <h2 class="text-5xl font-extrabold mb-4">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-900 to-gray-950 px-4 py-12">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-4">
                 Vos transferts d'unités <br/> en un clin d'œil !
             </h2>
-            <p class="text-xl mb-8 max-w-2xl text-gray-400">
+            <p class="text-lg sm:text-xl mb-8 max-w-2xl text-gray-400">
                 Recevez directement vos crédits sur votre téléphone, sans vous déplacer et sans frais supplémentaires.
             </p>
-            <a href="#services" class="bg-orange hover:bg-opacity-90 text-gray-950 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
-                Découvrir nos services
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://typebot.co/chapexraca-reel-transfert-d-unite-supabase-avec-auth-2-pxeioqo" target="_blank" class="bg-orange hover:bg-opacity-90 text-gray-950 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                    Effectuer un transfert
+                </a>
+                <a href="https://typebot.co/enregistreur-de-gerant-chapchap-2-ah68937" target="_blank" class="bg-green hover:bg-opacity-90 text-gray-950 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                    Devenir Gérant
+                </a>
+            </div>
         </section>
 
+        <!-- Section Services -->
         <section id="services" class="py-20 bg-gray-900">
             <div class="max-w-6xl mx-auto px-4">
                 <h3 class="text-3xl font-bold mb-12 text-center text-yellow">Nos Services</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-gray-850 p-8 rounded-lg shadow-xl border border-gray-800">
-                        <h4 class="text-xl font-bold mb-4 text-orange">Transfert d'Unités</h4>
-                        <p class="text-gray-400">Rechargez votre téléphone instantanément depuis chez vous. Fini les files d'attente aux cabines !</p>
+                <div class="grid md:grid-cols-2 gap-8 justify-center">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-orange">Transfert d'Unités Instantané</h4>
+                            <p class="text-gray-300 mb-6">Rechargez votre téléphone directement depuis chez vous. Simple, rapide et disponible à tout moment !</p>
+                        </div>
+                        <a href="https://typebot.co/chapexraca-reel-transfert-d-unite-supabase-avec-auth-2-pxeioqo" target="_blank" class="bg-orange text-gray-950 font-bold py-3 px-6 rounded-lg text-center hover:bg-opacity-90 transition">
+                            Lancer le transfert
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section Gérants -->
         <section id="gerants" class="py-20 bg-gray-950">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h3 class="text-3xl font-bold mb-6 text-green">Devenez Gérant</h3>
                 <p class="text-xl mb-8 text-gray-400">
                     Vous souhaitez gagner des revenus passifs ? Enregistrez-vous comme gérant et touchez 10 FCFA sur chaque transaction effectuée par vos clients parrainés.
                 </p>
-                <a href="https://app.typebot.com/fr/typebots/z7hridg50i5w8huqzwv1ux5j/edit?rightPanel=preview" class="bg-green hover:bg-opacity-90 text-gray-900 font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1 inline-block">
+                <a href="https://typebot.co/enregistreur-de-gerant-chapchap-2-ah68937" target="_blank" class="bg-green hover:bg-opacity-90 text-gray-900 font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1 inline-block">
                     S'enregistrer comme gérant
                 </a>
             </div>
         </section>
     </main>
+
+    <footer class="p-6 text-center text-gray-500 border-t border-gray-800 text-sm">
+        &copy; 2026 Allô Services CI. Tous droits réservés.
+    </footer>
 </body>
 </html>
-
-
-
-
-
-
