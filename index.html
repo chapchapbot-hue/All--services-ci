@@ -7,11 +7,6 @@
 <meta name="description" content="Recevez vos crédits téléphoniques directement sur votre téléphone. Transfert rapide, transparent et disponible 24h/24.">
 <meta name="theme-color" content="#030712">
 
-<!-- ============================================================ -->
-<!-- ✅ AJOUT #1 : BALISES OPEN GRAPH (partage WhatsApp / Facebook) -->
-<!-- ⚠️ Remplace TON-DOMAINE.com par ton URL réelle et ajoute      -->
-<!--    une image preview.jpg (1200x630px) à la racine du dépôt    -->
-<!-- ============================================================ -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Allô Services CI — Transfert d'unités instantané">
 <meta property="og:description" content="Rechargez votre téléphone dès 100 FCFA. Devenez gérant et gagnez 10 FCFA par transaction parrainée.">
@@ -20,7 +15,6 @@
 <meta property="og:site_name" content="Allô Services CI">
 <meta property="og:locale" content="fr_CI">
 
-<!-- Twitter Card (bonus) -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Allô Services CI — Transfert d'unités instantané">
 <meta name="twitter:description" content="Rechargez votre téléphone dès 100 FCFA.">
@@ -39,18 +33,18 @@ tailwind.config = {
         brand: {
           yellow: '#FACC15',
           orange: '#FB923C',
-          green:  '#4ADE80',
+          green: '#4ADE80',
         }
       },
       fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
       keyframes: {
         'fade-up': { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-        'float':   { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
+        'float': { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
         'pulse-glow': { '0%,100%': { opacity: '.35' }, '50%': { opacity: '.6' } },
       },
       animation: {
-        'fade-up':   'fade-up .7s cubic-bezier(.16,1,.3,1) both',
-        'float':     'float 6s ease-in-out infinite',
+        'fade-up': 'fade-up .7s cubic-bezier(.16,1,.3,1) both',
+        'float': 'float 6s ease-in-out infinite',
         'pulse-glow':'pulse-glow 5s ease-in-out infinite',
       }
     }
@@ -114,7 +108,7 @@ tailwind.config = {
                       p-2 shadow-2xl shadow-black/40
                       opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
                       transition-all duration-200">
-            <a href="#" onclick="openBot('inscription'); return false;"
+            <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
                class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition group/item">
               <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/25
                            flex items-center justify-center group-hover/item:scale-110 transition-transform">
@@ -127,7 +121,7 @@ tailwind.config = {
                 <span class="block text-xs text-gray-500 mt-0.5">Inscription en ligne</span>
               </span>
             </a>
-            <a href="#" onclick="openBot('gerant'); return false;"
+            <a href="https://allo-services-ci-chapchap.vercel.app"
                class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition group/item">
               <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-yellow/15 border border-brand-yellow/25
                            flex items-center justify-center group-hover/item:scale-110 transition-transform">
@@ -170,12 +164,12 @@ tailwind.config = {
       <a href="#fonctionnement" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">Comment ça marche</a>
 
       <div class="mt-2 px-4 pt-3 pb-1 text-xs font-bold uppercase tracking-widest text-gray-500">Gérants</div>
-      <a href="#" onclick="openBot('inscription'); toggleMenu(false); return false;"
+      <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
          class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
         <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
         Devenir gérant
       </a>
-      <a href="#" onclick="openBot('gerant'); toggleMenu(false); return false;"
+      <a href="https://allo-services-ci-chapchap.vercel.app"
          class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
         <span class="w-1.5 h-1.5 rounded-full bg-brand-yellow"></span>
         Espace gérant
@@ -243,16 +237,16 @@ tailwind.config = {
             Effectuer un transfert
           </button>
 
-          <button onclick="openBot('inscription')"
-                  class="inline-flex items-center justify-center gap-2
-                         border border-white/15 bg-white/5 hover:bg-white/10 hover:border-brand-green/40
-                         text-white font-bold py-4 px-8 rounded-full backdrop-blur
-                         transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+          <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
+             class="inline-flex items-center justify-center gap-2
+                    border border-white/15 bg-white/5 hover:bg-white/10 hover:border-brand-green/40
+                    text-white font-bold py-4 px-8 rounded-full backdrop-blur
+                    transition-all duration-300 hover:-translate-y-1">
             <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 7a4 4 0 100 8 4 4 0 000-8zM19 8v6M22 11h-6"/>
             </svg>
             Devenir Gérant
-          </button>
+          </a>
         </div>
 
         <p class="animate-fade-up mt-8 text-sm text-gray-500 flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
@@ -401,7 +395,6 @@ tailwind.config = {
         </p>
       </div>
 
-      <!-- ===== SIMULATEUR ===== -->
       <div class="max-w-2xl mx-auto mb-14">
         <div class="relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02]
                     backdrop-blur p-6 sm:p-8 overflow-hidden">
@@ -427,7 +420,6 @@ tailwind.config = {
             Montant à transférer
           </label>
           <div class="relative">
-            <!-- ✅ AJOUT #2 : pattern="[0-9]*" pour forcer le pavé numérique mobile -->
             <input id="sim-amount" type="number" inputmode="numeric" pattern="[0-9]*" min="100" max="30000" step="1"
                    placeholder="Ex : 6000"
                    class="w-full bg-gray-950/60 border border-white/10 focus:border-brand-orange/60
@@ -440,10 +432,10 @@ tailwind.config = {
           </div>
 
           <div class="flex flex-wrap gap-2 mt-4">
-            <button type="button" data-preset="250"   class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">250</button>
-            <button type="button" data-preset="1000"  class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">1 000</button>
-            <button type="button" data-preset="3000"  class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">3 000</button>
-            <button type="button" data-preset="6000"  class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">6 000</button>
+            <button type="button" data-preset="250" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">250</button>
+            <button type="button" data-preset="1000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">1 000</button>
+            <button type="button" data-preset="3000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">3 000</button>
+            <button type="button" data-preset="6000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">6 000</button>
             <button type="button" data-preset="15000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">15 000</button>
             <button type="button" data-preset="30000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">30 000</button>
           </div>
@@ -477,7 +469,6 @@ tailwind.config = {
         </div>
       </div>
 
-      <!-- ===== GRILLE DES PALIERS ===== -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
         <div class="group relative rounded-2xl border border-brand-yellow/25 bg-gradient-to-b from-brand-yellow/[0.07] to-transparent p-6
@@ -670,15 +661,15 @@ tailwind.config = {
             </li>
           </ul>
 
-          <button onclick="openBot('inscription')"
-                  class="inline-flex items-center gap-2 bg-brand-green hover:bg-green-400 text-gray-950
-                         font-bold py-4 px-8 rounded-full shadow-xl shadow-brand-green/25
-                         transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-green/40 cursor-pointer">
+          <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
+             class="inline-flex items-center gap-2 bg-brand-green hover:bg-green-400 text-gray-950
+                    font-bold py-4 px-8 rounded-full shadow-xl shadow-brand-green/25
+                    transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-green/40">
             S'enregistrer comme gérant
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
             </svg>
-          </button>
+          </a>
         </div>
 
         <div class="relative">
@@ -831,15 +822,15 @@ tailwind.config = {
             enregistrer des clients et effectuer vos opérations.
           </p>
 
-          <button onclick="openBot('gerant')"
-                  class="inline-flex items-center gap-2 bg-brand-yellow hover:bg-yellow-300 text-gray-950
-                         font-bold py-4 px-8 rounded-full shadow-xl shadow-brand-yellow/25
-                         transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-yellow/40 cursor-pointer">
+          <a href="https://allo-services-ci-chapchap.vercel.app"
+             class="inline-flex items-center gap-2 bg-brand-yellow hover:bg-yellow-300 text-gray-950
+                    font-bold py-4 px-8 rounded-full shadow-xl shadow-brand-yellow/25
+                    transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-yellow/40">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
             </svg>
             Accéder à mon espace
-          </button>
+          </a>
 
           <p class="mt-5 text-xs text-gray-500">
             Un identifiant et un mot de passe vous seront demandés dans la conversation.
@@ -1003,12 +994,12 @@ tailwind.config = {
             Effectuer un transfert
           </button>
 
-          <button onclick="openBot('inscription')"
-                  class="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5
-                         hover:bg-white/10 hover:border-brand-green/40 text-white font-bold
-                         py-4 px-8 rounded-full transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+          <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
+             class="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5
+                    hover:bg-white/10 hover:border-brand-green/40 text-white font-bold
+                    py-4 px-8 rounded-full transition-all duration-300 hover:-translate-y-1">
             Devenir Gérant
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -1057,14 +1048,14 @@ tailwind.config = {
             </button>
           </li>
           <li>
-            <button onclick="openBot('inscription')" class="text-gray-400 hover:text-brand-green transition cursor-pointer">
+            <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription" class="text-gray-400 hover:text-brand-green transition">
               Devenir gérant
-            </button>
+            </a>
           </li>
           <li>
-            <button onclick="openBot('gerant')" class="text-gray-400 hover:text-brand-yellow transition cursor-pointer">
+            <a href="https://allo-services-ci-chapchap.vercel.app" class="text-gray-400 hover:text-brand-yellow transition">
               Espace gérant
-            </button>
+            </a>
           </li>
         </ul>
       </div>
@@ -1084,28 +1075,39 @@ tailwind.config = {
 <!-- ===================== SCRIPT : Config bots + openBot ===================== -->
 <script>
   // ============================================================
-  // CONFIGURATION DES 3 BOTS TYPEBOT
+  // CONFIGURATION DES BOTS
   // ============================================================
   window.BOT_URLS = {
-    client:      'https://typebot.co/reel-transfert-d-unite-supabase-avec-auth-3-ii9lwji',
-    inscription: 'https://typebot.co/enregistreur-de-gerant-chapchap-2-ah68937',
-    gerant:      'https://typebot.co/le-bot-des-gerants-test-1ygy7r1'
+    client: 'https://typebot.co/chapchap-bot-client-1-35bwv89',
+    // 'inscription' et 'gerant' sont désormais gérés par la PWA
   };
 
   // ============================================================
-  // ✅ AJOUT #3 : FONCTION openBot AMÉLIORÉE
-  //    Injecte le montant du simulateur dans Typebot si présent
+  // FONCTION openBot
+  // - inscription → redirige vers la PWA (mode inscription)
+  // - gerant → redirige vers la PWA (connexion)
+  // - client → ouvre la bulle Typebot (avec pré-remplissage du montant)
   // ============================================================
   window.openBot = function (bot) {
+
+    // ── Devenir gérant → PWA en mode inscription
+    if (bot === 'inscription') {
+      window.location.href = "https://allo-services-ci-chapchap.vercel.app?action=inscription";
+      return;
+    }
+
+    // ── Espace gérant → PWA (page d'accueil)
+    if (bot === 'gerant') {
+      window.location.href = "https://allo-services-ci-chapchap.vercel.app";
+      return;
+    }
+
+    // ── Client → bulle Typebot
     if (bot === 'client') {
-      // Récupère le montant saisi dans le simulateur (s'il existe)
       const amountInput = document.getElementById('sim-amount');
       const raw = amountInput ? parseInt(amountInput.value, 10) : NaN;
 
       if (typeof Typebot !== 'undefined' && Typebot.open) {
-        // Si un montant valide est présent, on le pré-remplit dans le bot
-        // ⚠️ La variable "montant_transfert" doit exister dans ton flux Typebot
-        //    (Settings → Variables → nom exact : montant_transfert)
         if (!isNaN(raw) && raw >= 100 && raw <= 30000) {
           try {
             Typebot.setPrefilledVariables({ montant_transfert: raw });
@@ -1115,22 +1117,20 @@ tailwind.config = {
         }
         Typebot.open();
       } else {
-        // Fallback si la bulle n'est pas encore chargée
         window.open(window.BOT_URLS.client, '_blank', 'noopener');
       }
-    } else if (window.BOT_URLS[bot]) {
-      window.open(window.BOT_URLS[bot], '_blank', 'noopener');
-    } else {
-      console.warn('[openBot] Bot inconnu :', bot);
+      return;
     }
+
+    console.warn('[openBot] Bot inconnu :', bot);
   };
 </script>
 
 <!-- ===================== SCRIPT : Menu + Animations ===================== -->
 <script>
-  const menuBtn   = document.getElementById('menu-btn');
+  const menuBtn = document.getElementById('menu-btn');
   const mobileNav = document.getElementById('mobile-menu');
-  const iconOpen  = document.getElementById('icon-open');
+  const iconOpen = document.getElementById('icon-open');
   const iconClose = document.getElementById('icon-close');
 
   function toggleMenu(force) {
@@ -1169,11 +1169,11 @@ tailwind.config = {
 <!-- ===================== SCRIPT : Simulateur de frais ===================== -->
 <script>
   (function () {
-    const input   = document.getElementById('sim-amount');
-    const feeEl   = document.getElementById('sim-fee');
+    const input = document.getElementById('sim-amount');
+    const feeEl = document.getElementById('sim-fee');
     const totalEl = document.getElementById('sim-total');
-    const msgEl   = document.getElementById('sim-message');
-    const result  = document.getElementById('sim-result');
+    const msgEl = document.getElementById('sim-message');
+    const result = document.getElementById('sim-result');
 
     if (!input) return;
 
@@ -1182,9 +1182,9 @@ tailwind.config = {
 
     function calcFee(amount) {
       if (amount < MIN || amount > MAX) return null;
-      if (amount <= 499)  return { fee: 25,  color: 'text-brand-yellow', label: 'Palier 1' };
-      if (amount <= 2499) return { fee: 50,  color: 'text-brand-orange', label: 'Palier 2' };
-      if (amount <= 5000) return { fee: 100, color: 'text-brand-green',  label: 'Palier 3' };
+      if (amount <= 499) return { fee: 25, color: 'text-brand-yellow', label: 'Palier 1' };
+      if (amount <= 2499) return { fee: 50, color: 'text-brand-orange', label: 'Palier 2' };
+      if (amount <= 5000) return { fee: 100, color: 'text-brand-green', label: 'Palier 3' };
       return {
         fee: Math.round(amount * 0.02),
         color: 'text-white',
@@ -1201,36 +1201,36 @@ tailwind.config = {
       const amount = isNaN(raw) ? 0 : raw;
 
       if (!amount) {
-        feeEl.textContent   = '—';
+        feeEl.textContent = '—';
         totalEl.textContent = '—';
-        feeEl.className     = 'text-3xl sm:text-4xl font-extrabold text-brand-orange transition-colors';
-        msgEl.textContent   = 'Saisissez un montant entre 100 et 30 000 FCFA pour voir les frais appliqués.';
-        msgEl.className     = 'mt-4 text-xs text-gray-500 leading-relaxed';
-        result.className    = 'mt-6 rounded-2xl border border-white/10 bg-gray-950/60 p-5 transition-all duration-300';
+        feeEl.className = 'text-3xl sm:text-4xl font-extrabold text-brand-orange transition-colors';
+        msgEl.textContent = 'Saisissez un montant entre 100 et 30 000 FCFA pour voir les frais appliqués.';
+        msgEl.className = 'mt-4 text-xs text-gray-500 leading-relaxed';
+        result.className = 'mt-6 rounded-2xl border border-white/10 bg-gray-950/60 p-5 transition-all duration-300';
         return;
       }
 
       const res = calcFee(amount);
 
       if (!res) {
-        feeEl.textContent   = '—';
+        feeEl.textContent = '—';
         totalEl.textContent = '—';
-        feeEl.className     = 'text-3xl sm:text-4xl font-extrabold text-red-400 transition-colors';
-        msgEl.textContent   = amount < MIN
+        feeEl.className = 'text-3xl sm:text-4xl font-extrabold text-red-400 transition-colors';
+        msgEl.textContent = amount < MIN
           ? `Le montant minimum est de ${fmt(MIN)}.`
           : `Le montant maximum est de ${fmt(MAX)} par transaction.`;
-        msgEl.className     = 'mt-4 text-xs text-red-400 leading-relaxed font-semibold';
-        result.className    = 'mt-6 rounded-2xl border border-red-500/30 bg-red-500/[0.06] p-5 transition-all duration-300';
+        msgEl.className = 'mt-4 text-xs text-red-400 leading-relaxed font-semibold';
+        result.className = 'mt-6 rounded-2xl border border-red-500/30 bg-red-500/[0.06] p-5 transition-all duration-300';
         return;
       }
 
       const total = amount + res.fee;
-      feeEl.textContent   = fmt(res.fee);
+      feeEl.textContent = fmt(res.fee);
       totalEl.textContent = fmt(total);
-      feeEl.className     = `text-3xl sm:text-4xl font-extrabold ${res.color} transition-colors`;
-      msgEl.innerHTML     = `<span class="text-brand-orange font-semibold">${res.label}</span> — Pour un transfert de ${fmt(amount)}, les frais sont de ${fmt(res.fee)}.`;
-      msgEl.className     = 'mt-4 text-xs text-gray-400 leading-relaxed';
-      result.className    = 'mt-6 rounded-2xl border border-brand-orange/30 bg-brand-orange/[0.05] p-5 transition-all duration-300';
+      feeEl.className = `text-3xl sm:text-4xl font-extrabold ${res.color} transition-colors`;
+      msgEl.innerHTML = `<span class="text-brand-orange font-semibold">${res.label}</span> — Pour un transfert de ${fmt(amount)}, les frais sont de ${fmt(res.fee)}.`;
+      msgEl.className = 'mt-4 text-xs text-gray-400 leading-relaxed';
+      result.className = 'mt-6 rounded-2xl border border-brand-orange/30 bg-brand-orange/[0.05] p-5 transition-all duration-300';
     }
 
     input.addEventListener('input', update);
@@ -1258,7 +1258,7 @@ tailwind.config = {
   window.Typebot = Typebot;
 
   Typebot.initBubble({
-    typebot: "reel-transfert-d-unite-supabase-avec-auth-3-ii9lwji",
+    typebot: "chapchap-bot-client-1-35bwv89",
     theme: {
       button: {
         backgroundColor: "#DE8031",
