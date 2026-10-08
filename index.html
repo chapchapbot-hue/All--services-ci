@@ -1107,6 +1107,16 @@ tailwind.config = {
       const amountInput = document.getElementById('sim-amount');
       const raw = amountInput ? parseInt(amountInput.value, 10) : NaN;
 
+      // Purge de la session Typebot en cache : sinon `setPrefilledVariables`
+      // est ignoré (le SDK mémorise `typebot-<id>-initialChatReply` et `-progress`).
+      try {
+        for (const suffix of ['initialChatReply', 'progress']) {
+          const key = 'typebot-chapchap-bot-client-1-35bwv89-' + suffix;
+          sessionStorage.removeItem(key);
+          localStorage.removeItem(key);
+        }
+      } catch (e) {}
+
       if (typeof Typebot !== 'undefined' && Typebot.open) {
         if (!isNaN(raw) && raw >= 100 && raw <= 30000) {
           try {
@@ -1263,7 +1273,7 @@ tailwind.config = {
       button: {
         backgroundColor: "#DE8031",
         customIconSrc:
-          "https://s3.typebotstorage.com/public/workspaces/cmoiv6qk2000107i0w03srh6m/typebots/fme41g9z5xcdbx4gapxeioqo/bubble-icon?v=1790587003603",
+          "https://allo-services-ci-chapchap.vercel.app/icons/icon-192.png",
       },
     },
   });
