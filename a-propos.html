@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — Allô Services CI</title>
+<meta name="description" content="Allô Services CI : notre mission, nos valeurs et notre vision. Des applications simples et utiles pour le quotidien des Ivoiriens.">
+<meta name="theme-color" content="#030712">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { brand: { yellow: '#FACC15', orange: '#FB923C', green: '#4ADE80' } },
+  fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+  keyframes: {
+    'fade-up': { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+    'pulse-glow': { '0%,100%': { opacity: '.35' }, '50%': { opacity: '.6' } },
+  },
+  animation: { 'fade-up': 'fade-up .7s cubic-bezier(.16,1,.3,1) both', 'pulse-glow': 'pulse-glow 5s ease-in-out infinite' }
+} } }
+</script>
+<style>
+  body { background-color: #030712; }
+  ::selection { background: #FB923C; color: #0b0f19; }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #0b0f19; }
+  ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 9999px; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-950 text-white antialiased">
+
+<header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-gray-950/70 backdrop-blur-xl">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      <a href="index.html" class="flex items-center gap-2.5 group" aria-label="Allô Services CI — Accueil">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-yellow via-brand-orange to-brand-green flex items-center justify-center font-black text-gray-950 text-xs shadow-lg shadow-brand-orange/20 group-hover:scale-105 transition-transform duration-300">AS</span>
+        <span class="text-lg sm:text-xl font-extrabold tracking-tight"><span class="text-brand-yellow">Allô</span><span class="text-brand-orange">Services</span><span class="text-brand-green">CI</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-1" aria-label="Navigation principale">
+        <a href="index.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">Accueil</a>
+                <a href="chapchap.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">CHAPCHAP</a>
+        <a href="a-propos.html" class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-white/5">À propos</a>
+        <a href="contact.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">Contact</a>
+        <a href="chapchap.html" class="ml-3 bg-brand-orange hover:bg-orange-400 text-gray-950 font-semibold text-sm px-5 py-2.5 rounded-full transition shadow-lg shadow-brand-orange/20 hover:shadow-brand-orange/40 hover:-translate-y-0.5">Utiliser CHAPCHAP</a>
+      </nav>
+      <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 -mr-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-gray-950/95 backdrop-blur-xl">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1" aria-label="Navigation mobile">
+      <a href="index.html" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">Accueil</a>
+      <div class="mt-2 px-4 pt-3 pb-1 text-xs font-bold uppercase tracking-widest text-gray-500">
+      <a href="chapchap.html" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> CHAPCHAP
+      </a>
+      <div class="mt-2 px-4 pt-3 pb-1 text-xs font-bold uppercase tracking-widest text-gray-500">Allô Services CI</div>
+      <a href="a-propos.html" class="px-4 py-3 rounded-lg text-white bg-white/5">À propos</a>
+      <a href="contact.html" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pt-16 sm:pt-20">
+
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(74,222,128,0.15),transparent_65%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_85%_30%,rgba(251,146,60,0.10),transparent_60%)]"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-16 sm:pt-24 sm:pb-20">
+      <nav aria-label="Fil d'Ariane" class="mb-8 text-sm">
+        <a href="index.html" class="text-gray-500 hover:text-gray-300 transition">Accueil</a>
+        <span class="text-gray-700 mx-2">/</span>
+        <span class="text-brand-green font-semibold">À propos</span>
+      </nav>
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="animate-fade-up inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-4">À propos</span>
+        <h1 class="animate-fade-up text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6" style="animation-delay:.05s">
+          Qui <span class="bg-gradient-to-r from-brand-yellow via-brand-orange to-brand-green bg-clip-text text-transparent">sommes-nous</span> ?
+        </h1>
+        <p class="animate-fade-up text-base sm:text-xl text-gray-400 leading-relaxed" style="animation-delay:.12s">
+          Allô Services CI est une entreprise ivoirienne qui crée des applications
+          simples et utiles pour le quotidien.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 border-y border-white/5 bg-gray-900/50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="rounded-3xl border border-brand-orange/25 bg-gradient-to-br from-brand-orange/[0.08] to-transparent p-8 sm:p-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-orange mb-4">Notre mission</p>
+        <p class="text-lg sm:text-2xl text-gray-200 leading-relaxed">
+          Rendre les services du quotidien <span class="text-white font-semibold">accessibles à tous les Ivoiriens</span>,
+          depuis un simple téléphone.
+        </p>
+        <p class="mt-5 text-gray-400 leading-relaxed">
+          Pas besoin d'être expert : nos applications doivent être comprises en une minute
+          et utilisables tout de suite. Pas besoin d'un téléphone récent non plus —
+          tout fonctionne dans le navigateur.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-yellow mb-3">Nos valeurs</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ce qui nous guide</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-brand-yellow/25 bg-gradient-to-b from-brand-yellow/[0.07] to-transparent p-7">
+          <span class="inline-flex w-12 h-12 rounded-xl bg-brand-yellow/20 border border-brand-yellow/30 items-center justify-center text-2xl mb-5" aria-hidden="true">🟡</span>
+          <h3 class="text-xl font-bold mb-3 text-brand-yellow">Simplicité</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Une application qu'on comprend tout de suite, sans mode d'emploi et sans formation.
+            Si on doit expliquer longuement, c'est qu'on s'est trompé.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-brand-orange/25 bg-gradient-to-b from-brand-orange/[0.07] to-transparent p-7">
+          <span class="inline-flex w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/30 items-center justify-center text-2xl mb-5" aria-hidden="true">🟠</span>
+          <h3 class="text-xl font-bold mb-3 text-brand-orange">Transparence</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Des frais clairs, annoncés à l'avance, visibles avant de valider.
+            Aucune surprise, aucune commission cachée.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-brand-green/25 bg-gradient-to-b from-brand-green/[0.07] to-transparent p-7">
+          <span class="inline-flex w-12 h-12 rounded-xl bg-brand-green/20 border border-brand-green/30 items-center justify-center text-2xl mb-5" aria-hidden="true">🟢</span>
+          <h3 class="text-xl font-bold mb-3 text-brand-green">Proximité</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Des solutions pensées en Côte d'Ivoire, pour la réalité et le budget des Ivoiriens.
+            Pas des applications importées et mal adaptées.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24 bg-gray-900/50 border-y border-white/5">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-4">Notre vision</span>
+      <p class="text-2xl sm:text-3xl font-bold text-gray-200 leading-relaxed">
+        Une Côte d'Ivoire où chacun trouve, dans son téléphone,
+        <span class="bg-gradient-to-r from-brand-yellow via-brand-orange to-brand-green bg-clip-text text-transparent">l'application qui lui simplifie la vie</span>.
+      </p>
+      <p class="mt-8 text-gray-400 leading-relaxed">
+        Nous commençons avec le transfert d'unités (CHAPCHAP), puis viendront
+        la mise en relation avec les professionnels et l'accès aux pharmacies.
+        D'autres idées suivront, toujours avec la même exigence : utile, simple, honnête.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-10 sm:p-14 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-5">Découvre nos applications</h2>
+        <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto mb-9">
+          Une application disponible aujourd'hui.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <a href="index.html#application" class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-400 text-gray-950 font-bold py-4 px-8 rounded-full shadow-xl shadow-brand-orange/25 transition-all duration-300 hover:-translate-y-1">Voir notre application</a>
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:-translate-y-1">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-white/5 bg-gray-950">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2.5 mb-4">
+          <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-yellow via-brand-orange to-brand-green flex items-center justify-center font-black text-gray-950 text-xs">AS</span>
+          <span class="text-lg font-extrabold tracking-tight"><span class="text-brand-yellow">Allô</span><span class="text-brand-orange">Services</span><span class="text-brand-green">CI</span></span>
+        </div>
+        <p class="text-sm text-gray-500 leading-relaxed max-w-sm mb-6">Nous créons des applications simples et utiles pour le quotidien des Ivoiriens.</p>
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="tel:+2250508445683" class="text-gray-400 hover:text-brand-orange transition">📞 05 08 44 56 83</a>
+          <a href="https://wa.me/2250508445683" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-green transition">💬 WhatsApp</a>
+          <a href="mailto:alloservices.ci@gmail.com" class="text-gray-400 hover:text-brand-yellow transition">✉️ Email</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-white mb-4">CHAPCHAP</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="chapchap.html" class="text-gray-400 hover:text-brand-orange transition">Découvrir</a></li>
+          <li><a href="chapchap.html#tarifs" class="text-gray-400 hover:text-brand-orange transition">Tarifs</a></li>
+          <li><a href="chapchap.html#faq" class="text-gray-400 hover:text-brand-orange transition">FAQ</a></li>
+          <li><a href="https://allo-services-ci-chapchap.vercel.app/v2/" class="text-brand-orange font-semibold hover:underline transition">Utiliser CHAPCHAP</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Allô Services CI</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="a-propos.html" class="text-gray-400 hover:text-brand-orange transition">À propos</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-brand-orange transition">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-600">&copy; <span id="year">2026</span> Allô Services CI. Tous droits réservés.</p>
+      <p class="text-xs text-gray-600">Conçu pour la Côte d'Ivoire 🇨🇮</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileNav = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  function toggleMenu(force) {
+    const isOpen = force !== undefined ? force : mobileNav.classList.contains('hidden');
+    mobileNav.classList.toggle('hidden', !isOpen);
+    iconOpen.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  }
+  menuBtn.addEventListener('click', () => toggleMenu());
+  mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleMenu(false); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('animate-fade-up'); observer.unobserve(entry.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('section > div > *, article').forEach(el => {
+    if (!el.classList.contains('animate-fade-up')) { el.style.opacity = '0'; observer.observe(el); }
+  });
+</script>
+</body>
+</html>

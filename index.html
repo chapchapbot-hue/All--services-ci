@@ -3,22 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Allô Services CI — Transfert d'unités instantané</title>
-<meta name="description" content="Recevez vos crédits téléphoniques directement sur votre téléphone. Transfert rapide, transparent et disponible 24h/24.">
+<title>Allô Services CI — Simplifier le quotidien des Ivoiriens</title>
+<meta name="description" content="Allô Services CI crée des applications simples et utiles pour le quotidien des Ivoiriens. Découvre CHAPCHAP, notre application de transfert d'unités.">
 <meta name="theme-color" content="#030712">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Allô Services CI — Transfert d'unités instantané">
-<meta property="og:description" content="Rechargez votre téléphone dès 100 FCFA. Devenez gérant et gagnez 10 FCFA par transaction parrainée.">
-<meta property="og:image" content="https://allo-services-ci-chapchap.vercel.app/icons/icon-512.png">
-<meta property="og:url" content="https://chapchapbot-hue.github.io/All--services-ci/">
+<meta property="og:title" content="Allô Services CI — Simplifier le quotidien des Ivoiriens">
+<meta property="og:description" content="Des applications utiles, disponibles 24h/24. Découvre CHAPCHAP.">
 <meta property="og:site_name" content="Allô Services CI">
 <meta property="og:locale" content="fr_CI">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Allô Services CI — Transfert d'unités instantané">
-<meta name="twitter:description" content="Rechargez votre téléphone dès 100 FCFA.">
-<meta name="twitter:image" content="https://allo-services-ci-chapchap.vercel.app/icons/icon-512.png">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,28 +20,20 @@
 
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        brand: {
-          yellow: '#FACC15',
-          orange: '#FB923C',
-          green: '#4ADE80',
-        }
-      },
-      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-      keyframes: {
-        'fade-up': { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-        'float': { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
-        'pulse-glow': { '0%,100%': { opacity: '.35' }, '50%': { opacity: '.6' } },
-      },
-      animation: {
-        'fade-up': 'fade-up .7s cubic-bezier(.16,1,.3,1) both',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow':'pulse-glow 5s ease-in-out infinite',
-      }
+  theme: { extend: {
+    colors: { brand: { yellow: '#FACC15', orange: '#FB923C', green: '#4ADE80' } },
+    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+    keyframes: {
+      'fade-up': { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+      'float': { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
+      'pulse-glow': { '0%,100%': { opacity: '.35' }, '50%': { opacity: '.6' } },
+    },
+    animation: {
+      'fade-up': 'fade-up .7s cubic-bezier(.16,1,.3,1) both',
+      'float': 'float 6s ease-in-out infinite',
+      'pulse-glow': 'pulse-glow 5s ease-in-out infinite',
     }
-  }
+  } }
 }
 </script>
 
@@ -59,19 +44,10 @@ tailwind.config = {
   ::-webkit-scrollbar-track { background: #0b0f19; }
   ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 9999px; }
   ::-webkit-scrollbar-thumb:hover { background: #374151; }
-  summary::-webkit-details-marker { display: none; }
-  summary { list-style: none; }
-  input[type=number]::-webkit-outer-spin-button,
-  input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-  input[type=number] { -moz-appearance: textfield; }
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: .01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: .01ms !important;
-    }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   }
-</style>
+  </style>
 </head>
 
 <body class="font-sans bg-gray-950 text-white antialiased">
@@ -80,7 +56,7 @@ tailwind.config = {
 <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-gray-950/70 backdrop-blur-xl">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex items-center justify-between h-16 sm:h-20">
-      <a href="#" class="flex items-center gap-2.5 group" aria-label="Allô Services CI — Accueil">
+      <a href="index.html" class="flex items-center gap-2.5 group" aria-label="Allô Services CI — Accueil">
         <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-yellow via-brand-orange to-brand-green
                      flex items-center justify-center font-black text-gray-950 text-xs shadow-lg shadow-brand-orange/20
                      group-hover:scale-105 transition-transform duration-300">AS</span>
@@ -90,59 +66,16 @@ tailwind.config = {
       </a>
 
       <nav class="hidden md:flex items-center gap-1" aria-label="Navigation principale">
-        <a href="#services" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">Services</a>
-        <a href="#tarifs" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">Tarifs</a>
-        <a href="#fonctionnement" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">Comment ça marche</a>
-
-        <div class="relative group">
-          <button type="button"
-                  class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition
-                         inline-flex items-center gap-1.5 cursor-pointer">
-            Gérants
-            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="absolute right-0 top-full mt-2 w-64 rounded-2xl border border-white/10 bg-gray-900/95 backdrop-blur-xl
-                      p-2 shadow-2xl shadow-black/40
-                      opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-                      transition-all duration-200">
-            <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
-               class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition group/item">
-              <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/25
-                           flex items-center justify-center group-hover/item:scale-110 transition-transform">
-                <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 7a4 4 0 100 8 4 4 0 000-8zM19 8v6M22 11h-6"/>
-                </svg>
-              </span>
-              <span>
-                <span class="block text-sm font-bold text-white">Devenir gérant</span>
-                <span class="block text-xs text-gray-500 mt-0.5">Inscription en ligne</span>
-              </span>
-            </a>
-            <a href="https://allo-services-ci-chapchap.vercel.app?action=login"
-               class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition group/item">
-              <span class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-yellow/15 border border-brand-yellow/25
-                           flex items-center justify-center group-hover/item:scale-110 transition-transform">
-                <svg class="w-4 h-4 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zM8 11V7a4 4 0 118 0v4"/>
-                </svg>
-              </span>
-              <span>
-                <span class="block text-sm font-bold text-white">Espace gérant</span>
-                <span class="block text-xs text-gray-500 mt-0.5">Accès réservé</span>
-              </span>
-            </a>
-          </div>
-        </div>
-
-        <button onclick="openBot('client')"
-                class="ml-3 bg-brand-orange hover:bg-orange-400 text-gray-950 font-semibold text-sm
-                       px-5 py-2.5 rounded-full transition shadow-lg shadow-brand-orange/20
-                       hover:shadow-brand-orange/40 hover:-translate-y-0.5 cursor-pointer">
-          Transfert d'unités
-        </button>
+        <a href="index.html" class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-white/5">Accueil</a>
+        <a href="chapchap.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">CHAPCHAP</a>
+        <a href="a-propos.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">À propos</a>
+        <a href="contact.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition">Contact</a>
+        <a href="https://allo-services-ci-chapchap.vercel.app/v2/"
+           class="ml-3 bg-brand-orange hover:bg-orange-400 text-gray-950 font-semibold text-sm
+                  px-5 py-2.5 rounded-full transition shadow-lg shadow-brand-orange/20
+                  hover:shadow-brand-orange/40 hover:-translate-y-0.5">
+          Utiliser CHAPCHAP
+        </a>
       </nav>
 
       <button id="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu"
@@ -159,33 +92,23 @@ tailwind.config = {
 
   <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-gray-950/95 backdrop-blur-xl">
     <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1" aria-label="Navigation mobile">
-      <a href="#services" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">Services</a>
-      <a href="#tarifs" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">Tarifs</a>
-      <a href="#fonctionnement" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">Comment ça marche</a>
-
-      <div class="mt-2 px-4 pt-3 pb-1 text-xs font-bold uppercase tracking-widest text-gray-500">Gérants</div>
-      <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
-         class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
-        Devenir gérant
+      <a href="index.html" class="px-4 py-3 rounded-lg text-white bg-white/5">Accueil</a>
+      <a href="chapchap.html" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> CHAPCHAP
       </a>
-      <a href="https://allo-services-ci-chapchap.vercel.app?action=login"
-         class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-brand-yellow"></span>
-        Espace gérant
+      <a href="a-propos.html" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">À propos</a>
+      <a href="contact.html" class="px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition">Contact</a>
+      <a href="https://allo-services-ci-chapchap.vercel.app/v2/"
+         class="mt-3 bg-brand-orange text-gray-950 font-bold py-3 rounded-full hover:bg-orange-400 transition text-center">
+        Utiliser CHAPCHAP
       </a>
-
-      <button onclick="openBot('client'); toggleMenu(false);"
-              class="mt-3 bg-brand-orange text-gray-950 font-bold py-3 rounded-full hover:bg-orange-400 transition cursor-pointer">
-        Transfert d'unités
-      </button>
     </nav>
   </div>
 </header>
 
 <main class="pt-16 sm:pt-20">
 
-  <!-- ===================== HERO ===================== -->
+  <!-- ===================== HERO — ALLÔ SERVICES CI ===================== -->
   <section class="relative overflow-hidden">
     <div class="pointer-events-none absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(251,146,60,0.18),transparent_65%)]"></div>
@@ -193,11 +116,10 @@ tailwind.config = {
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_10%_40%,rgba(250,204,21,0.08),transparent_60%)]"></div>
       <div class="absolute inset-0 opacity-[0.35]
                   bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]
-                  bg-[size:64px_64px]
-                  [mask-image:radial-gradient(ellipse_60%_60%_at_50%_40%,black,transparent_75%)]"></div>
+                  bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_40%,black,transparent_75%)]"></div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-24 sm:pt-24 sm:pb-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
       <div class="max-w-3xl mx-auto text-center">
 
         <div class="animate-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full
@@ -207,759 +129,230 @@ tailwind.config = {
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
           </span>
-          Service disponible 24h/24 — 7j/7
+          Entreprise ivoirienne · Abidjan 🇨🇮
         </div>
 
         <h1 class="animate-fade-up text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6"
             style="animation-delay:.05s">
-          Vos transferts d'unités<br class="hidden sm:block">
+          Simplifier le quotidien<br class="hidden sm:block">
           <span class="bg-gradient-to-r from-brand-yellow via-brand-orange to-brand-green bg-clip-text text-transparent">
-            en un clin d'œil
+            des Ivoiriens
           </span>
         </h1>
 
+        <p class="animate-fade-up text-lg sm:text-2xl font-semibold text-white mb-5" style="animation-delay:.1s">
+          par <span class="text-brand-yellow">Allô</span><span class="text-brand-orange">Services</span><span class="text-brand-green">CI</span>
+        </p>
+
         <p class="animate-fade-up text-base sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
-           style="animation-delay:.12s">
-          Recevez directement vos crédits sur votre téléphone, rapidement et en toute transparence.
+           style="animation-delay:.14s">
+          Nous créons des applications utiles et accessibles, pensées ici, pour ici.
+          Notre première application s'appelle <span class="text-white font-semibold">CHAPCHAP</span>.
         </p>
 
         <div class="animate-fade-up flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center"
              style="animation-delay:.2s">
-          <button onclick="openBot('client')"
-                  class="group relative inline-flex items-center justify-center gap-2
-                         bg-brand-orange hover:bg-orange-400 text-gray-950 font-bold
-                         py-4 px-8 rounded-full shadow-xl shadow-brand-orange/25
-                         transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-orange/40
-                         cursor-pointer">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-            Effectuer un transfert
-          </button>
+          <a href="chapchap.html"
+             class="group inline-flex items-center justify-center gap-2
+                    bg-brand-orange hover:bg-orange-400 text-gray-950 font-bold
+                    py-4 px-8 rounded-full shadow-xl shadow-brand-orange/25
+                    transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-orange/40">
+            <span aria-hidden="true">🦅</span>
+            Découvrir CHAPCHAP
+          </a>
 
-          <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
+          <a href="contact.html"
              class="inline-flex items-center justify-center gap-2
                     border border-white/15 bg-white/5 hover:bg-white/10 hover:border-brand-green/40
                     text-white font-bold py-4 px-8 rounded-full backdrop-blur
                     transition-all duration-300 hover:-translate-y-1">
             <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 7a4 4 0 100 8 4 4 0 000-8zM19 8v6M22 11h-6"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.5 1.2l-2.26 1.13a11 11 0 005.5 5.5l1.13-2.26a1 1 0 011.2-.5l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/>
             </svg>
-            Devenir Gérant
+            Nous contacter
           </a>
         </div>
-
-        <p class="animate-fade-up mt-8 text-sm text-gray-500 flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
-           style="animation-delay:.28s">
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-            </svg>
-            Frais dès 25 FCFA
-          </span>
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-            </svg>
-            100% en ligne
-          </span>
-          <span class="inline-flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-            </svg>
-            Sans déplacement
-          </span>
-        </p>
       </div>
     </div>
   </section>
 
-  <!-- ===================== BANDEAU CHIFFRES ===================== -->
-  <section class="border-y border-white/5 bg-white/[0.02]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+  <!-- ===================== QUI SOMMES-NOUS ===================== -->
+  <section class="border-y border-white/5 bg-gray-900/50 py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <dt class="text-3xl sm:text-4xl font-extrabold text-brand-yellow">Dès 25 F</dt>
-          <dd class="mt-1 text-sm text-gray-400">Frais selon le montant</dd>
+          <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-3">Qui sommes-nous</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+            Une entreprise <span class="text-brand-green">ivoirienne</span>, des outils concrets
+          </h2>
+          <p class="text-gray-400 text-base sm:text-lg leading-relaxed mb-5">
+            Allô Services CI est née d'un constat simple : beaucoup de services du quotidien
+            restent compliqués à obtenir, alors qu'un simple téléphone devrait suffire.
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            Nous construisons donc des applications <span class="text-white font-semibold">simples</span>,
+            <span class="text-white font-semibold">transparentes</span> et
+            <span class="text-white font-semibold">accessibles</span> : pas besoin d'être expert,
+            pas besoin d'installer quoi que ce soit.
+          </p>
+          <a href="a-propos.html" class="inline-flex items-center gap-2 text-brand-green font-bold hover:gap-3 transition-all">
+            En savoir plus sur nous
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
-        <div>
-          <dt class="text-3xl sm:text-4xl font-extrabold text-brand-orange">100 F à 30 000 F</dt>
-          <dd class="mt-1 text-sm text-gray-400">Montants acceptés</dd>
+
+        <div class="grid gap-4">
+          <div class="rounded-2xl border border-brand-yellow/25 bg-gradient-to-b from-brand-yellow/[0.07] to-transparent p-6">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex w-11 h-11 flex-shrink-0 rounded-xl bg-brand-yellow/20 border border-brand-yellow/30 items-center justify-center text-xl" aria-hidden="true">🟡</span>
+              <div>
+                <h3 class="font-bold mb-1 text-brand-yellow">Simplicité</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Une application qu'on comprend tout de suite, sans mode d'emploi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-brand-orange/25 bg-gradient-to-b from-brand-orange/[0.07] to-transparent p-6">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex w-11 h-11 flex-shrink-0 rounded-xl bg-brand-orange/20 border border-brand-orange/30 items-center justify-center text-xl" aria-hidden="true">🟠</span>
+              <div>
+                <h3 class="font-bold mb-1 text-brand-orange">Transparence</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Des frais clairs, annoncés à l'avance. Aucune surprise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-brand-green/25 bg-gradient-to-b from-brand-green/[0.07] to-transparent p-6">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex w-11 h-11 flex-shrink-0 rounded-xl bg-brand-green/20 border border-brand-green/30 items-center justify-center text-xl" aria-hidden="true">🟢</span>
+              <div>
+                <h3 class="font-bold mb-1 text-brand-green">Proximité</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Des solutions pensées en Côte d'Ivoire, pour ton budget et ta réalité.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== NOTRE APPLICATION : CHAPCHAP ===================== -->
+  <section id="application" class="scroll-mt-24 py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+      <div class="max-w-2xl mx-auto text-center mb-14">
+        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-orange mb-3">Notre application</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+          🦅 <span class="text-brand-yellow">CHAPCHAP</span>
+        </h2>
+        <p class="text-gray-400 text-base sm:text-lg">
+          Transfert d'unités téléphoniques en quelques secondes.
+        </p>
+      </div>
+
+      <article class="relative overflow-hidden rounded-3xl border border-brand-orange/30
+                      bg-gradient-to-br from-brand-orange/[0.10] to-white/[0.02] p-7 sm:p-10">
+        <div class="pointer-events-none absolute inset-0 -z-10">
+          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_0%,rgba(251,146,60,0.18),transparent_60%)]"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_10%_100%,rgba(74,222,128,0.10),transparent_60%)]"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-10 items-center">
+          <div class="lg:col-span-2">
+            <div class="flex flex-wrap items-center gap-3 mb-5">
+              <span class="px-3 py-1 rounded-full bg-brand-green/15 border border-brand-green/30
+                           text-brand-green text-xs font-bold uppercase tracking-wider">Disponible</span>
+              <span class="text-sm text-gray-400">Application web — aucune installation requise</span>
+            </div>
+
+            <p class="text-gray-200 text-lg leading-relaxed mb-7">
+              Recharge ton téléphone ou celui d'un proche, à toute heure.
+              Des frais clairs affichés avant de valider, et des commissions
+              pour ceux qui parrainent leurs clients.
+            </p>
+
+            <ul class="grid sm:grid-cols-2 gap-3 mb-8 text-sm text-gray-300">
+              <li class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Frais dès <span class="text-white font-semibold">25 FCFA</span>
+              </li>
+              <li class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                De <span class="text-white font-semibold">100 F à 30 000 F</span>
+              </li>
+              <li class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Disponible <span class="text-white font-semibold">24h/24</span>
+              </li>
+              <li class="inline-flex items-center gap-2">
+                <svg class="w-4 h-4 flex-shrink-0 text-brand-green" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-white font-semibold">10 FCFA</span> par client parrainé
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="https://allo-services-ci-chapchap.vercel.app/v2/"
+                 class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-400
+                        text-gray-950 font-bold py-3.5 px-7 rounded-full shadow-lg shadow-brand-orange/25
+                        transition-all duration-300 hover:-translate-y-0.5">
+                Utiliser CHAPCHAP
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="chapchap.html"
+                 class="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5
+                        hover:bg-white/10 text-white font-bold py-3.5 px-7 rounded-full
+                        transition-all duration-300 hover:-translate-y-0.5">
+                Tout savoir sur CHAPCHAP
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-1">
+            <div class="rounded-2xl border border-white/10 bg-gray-950/50 p-6">
+              <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-5 text-center">Pour qui ?</p>
+              <ul class="space-y-4 text-sm">
+                <li class="flex items-start gap-3">
+                  <span class="text-lg" aria-hidden="true">📱</span>
+                  <span class="text-gray-400">Ceux qui veulent <span class="text-white font-semibold">recharger facilement</span></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-lg" aria-hidden="true">🤝</span>
+                  <span class="text-gray-400">Ceux qui veulent <span class="text-white font-semibold">aider un proche</span> à distance</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-lg" aria-hidden="true">🏪</span>
+                  <span class="text-gray-400">Les <span class="text-white font-semibold">gérants</span> qui veulent gagner une commission</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== CHIFFRES / CONFIANCE ===================== -->
+  <section class="border-y border-white/5 bg-gray-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div>
-          <dt class="text-3xl sm:text-4xl font-extrabold text-brand-green">24/7</dt>
+          <dt class="text-3xl sm:text-4xl font-extrabold text-brand-yellow">24/7</dt>
           <dd class="mt-1 text-sm text-gray-400">Service toujours ouvert</dd>
         </div>
         <div>
-          <dt class="text-3xl sm:text-4xl font-extrabold text-white">10 FCFA</dt>
-          <dd class="mt-1 text-sm text-gray-400">Gagnés par transaction parrainée</dd>
+          <dt class="text-3xl sm:text-4xl font-extrabold text-brand-orange">100 %</dt>
+          <dd class="mt-1 text-sm text-gray-400">En ligne, sans déplacement</dd>
+        </div>
+        <div>
+          <dt class="text-3xl sm:text-4xl font-extrabold text-brand-green">25 F</dt>
+          <dd class="mt-1 text-sm text-gray-400">Frais de départ</dd>
+        </div>
+        <div>
+          <dt class="text-3xl sm:text-4xl font-extrabold text-white">🇨🇮</dt>
+          <dd class="mt-1 text-sm text-gray-400">Conçu en Côte d'Ivoire</dd>
         </div>
       </dl>
-    </div>
-  </section>
-
-  <!-- ===================== SERVICES ===================== -->
-  <section id="services" class="scroll-mt-24 py-20 sm:py-28">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
-      <div class="max-w-2xl mx-auto text-center mb-14">
-        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-orange mb-3">Nos services</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-          Tout ce qu'il vous faut, <span class="text-brand-yellow">sans complication</span>
-        </h2>
-        <p class="text-gray-400 text-base sm:text-lg">
-          Un service pensé pour la simplicité et la rapidité.
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <article class="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-7
-                        hover:border-brand-orange/40 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/15 border border-brand-orange/25
-                      flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Transfert instantané</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-6">
-            Rechargez votre téléphone directement depuis chez vous. Simple, rapide et disponible à tout moment.
-          </p>
-          <button onclick="openBot('client')"
-                  class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-orange
-                         hover:gap-2.5 transition-all cursor-pointer">
-            Lancer un transfert
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </button>
-        </article>
-
-        <article class="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-7
-                        hover:border-brand-green/40 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1">
-          <div class="w-12 h-12 rounded-xl bg-brand-green/15 border border-brand-green/25
-                      flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-6 h-6 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Frais transparents</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-6">
-            Des frais clairs, fixes et affichés à l'avance. Vous savez exactement ce que vous payez avant de valider.
-          </p>
-          <a href="#tarifs" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-green
-                                   hover:gap-2.5 transition-all">
-            Voir la grille tarifaire
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </article>
-
-        <article class="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-7
-                        hover:border-brand-yellow/40 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1
-                        sm:col-span-2 lg:col-span-1">
-          <div class="w-12 h-12 rounded-xl bg-brand-yellow/15 border border-brand-yellow/25
-                      flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="9"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Disponible 24h/24</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-6">
-            Jour, nuit, week-end ou jour férié — le service reste accessible quand vous en avez besoin.
-          </p>
-          <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-yellow">
-            Toujours ouvert
-          </span>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== TARIFS + SIMULATEUR ===================== -->
-  <section id="tarifs" class="scroll-mt-24 py-20 sm:py-28 bg-gray-900/50 border-y border-white/5">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
-      <div class="max-w-2xl mx-auto text-center mb-14">
-        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-yellow mb-3">Grille tarifaire</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-          Des frais <span class="text-brand-yellow">clairs</span>, sans surprise
-        </h2>
-        <p class="text-gray-400 text-base sm:text-lg">
-          Le montant des frais dépend uniquement du montant de votre transfert.
-        </p>
-      </div>
-
-      <div class="max-w-2xl mx-auto mb-14">
-        <div class="relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02]
-                    backdrop-blur p-6 sm:p-8 overflow-hidden">
-          <div class="pointer-events-none absolute inset-0 -z-10">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(251,146,60,0.15),transparent_65%)]"></div>
-          </div>
-
-          <div class="flex items-center gap-3 mb-6">
-            <span class="w-10 h-10 rounded-xl bg-brand-orange/15 border border-brand-orange/25
-                         flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <rect x="4" y="2" width="16" height="20" rx="2"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 6h8M8 10h8M8 14h4"/>
-              </svg>
-            </span>
-            <div>
-              <p class="text-xs font-bold uppercase tracking-widest text-brand-orange">Simulateur</p>
-              <h3 class="text-lg sm:text-xl font-extrabold">Calculez vos frais</h3>
-            </div>
-          </div>
-
-          <label for="sim-amount" class="block text-sm font-semibold text-gray-300 mb-2">
-            Montant à transférer
-          </label>
-          <div class="relative">
-            <input id="sim-amount" type="number" inputmode="numeric" pattern="[0-9]*" min="100" max="30000" step="1"
-                   placeholder="Ex : 6000"
-                   class="w-full bg-gray-950/60 border border-white/10 focus:border-brand-orange/60
-                          focus:ring-2 focus:ring-brand-orange/20 rounded-2xl pl-5 pr-20 py-4
-                          text-2xl font-bold text-white placeholder-gray-600
-                          outline-none transition-all duration-200" />
-            <span class="absolute right-5 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-500 pointer-events-none">
-              FCFA
-            </span>
-          </div>
-
-          <div class="flex flex-wrap gap-2 mt-4">
-            <button type="button" data-preset="250" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">250</button>
-            <button type="button" data-preset="1000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">1 000</button>
-            <button type="button" data-preset="3000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">3 000</button>
-            <button type="button" data-preset="6000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">6 000</button>
-            <button type="button" data-preset="15000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">15 000</button>
-            <button type="button" data-preset="30000" class="sim-preset px-3 py-1.5 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:border-brand-orange/40 transition cursor-pointer">30 000</button>
-          </div>
-
-          <div id="sim-result" class="mt-6 rounded-2xl border border-white/10 bg-gray-950/60 p-5 transition-all duration-300">
-            <div class="grid grid-cols-2 gap-4 items-center">
-              <div>
-                <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Frais</p>
-                <p id="sim-fee" class="text-3xl sm:text-4xl font-extrabold text-brand-orange transition-colors">—</p>
-              </div>
-              <div class="text-right">
-                <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Total à payer</p>
-                <p id="sim-total" class="text-2xl sm:text-3xl font-extrabold text-white">—</p>
-              </div>
-            </div>
-            <p id="sim-message" class="mt-4 text-xs text-gray-500 leading-relaxed">
-              Saisissez un montant entre 100 et 30 000 FCFA pour voir les frais appliqués.
-            </p>
-          </div>
-
-          <button onclick="openBot('client')"
-                  class="mt-5 w-full inline-flex items-center justify-center gap-2
-                         bg-brand-orange hover:bg-orange-400 text-gray-950 font-bold
-                         py-3.5 px-6 rounded-full shadow-lg shadow-brand-orange/25
-                         transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
-            Transférer ce montant
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
-        <div class="group relative rounded-2xl border border-brand-yellow/25 bg-gradient-to-b from-brand-yellow/[0.07] to-transparent p-6
-                    transition-all duration-300 hover:-translate-y-1 hover:border-brand-yellow/50">
-          <div class="flex items-center gap-2 mb-5">
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-yellow text-gray-950 font-extrabold text-sm">1</span>
-            <span class="text-xs font-bold uppercase tracking-widest text-brand-yellow">Palier 1</span>
-          </div>
-          <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">Montant du transfert</p>
-          <p class="text-lg font-extrabold mb-5">100 – 499 <span class="text-sm font-medium text-gray-400">FCFA</span></p>
-          <div class="pt-5 border-t border-white/10">
-            <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Frais</p>
-            <p class="text-3xl font-extrabold text-brand-yellow">25 <span class="text-base font-semibold text-gray-400">FCFA</span></p>
-          </div>
-        </div>
-
-        <div class="group relative rounded-2xl border border-brand-orange/25 bg-gradient-to-b from-brand-orange/[0.07] to-transparent p-6
-                    transition-all duration-300 hover:-translate-y-1 hover:border-brand-orange/50">
-          <div class="flex items-center gap-2 mb-5">
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-orange text-gray-950 font-extrabold text-sm">2</span>
-            <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Palier 2</span>
-          </div>
-          <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">Montant du transfert</p>
-          <p class="text-lg font-extrabold mb-5">500 – 2 499 <span class="text-sm font-medium text-gray-400">FCFA</span></p>
-          <div class="pt-5 border-t border-white/10">
-            <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Frais</p>
-            <p class="text-3xl font-extrabold text-brand-orange">50 <span class="text-base font-semibold text-gray-400">FCFA</span></p>
-          </div>
-        </div>
-
-        <div class="group relative rounded-2xl border border-brand-green/25 bg-gradient-to-b from-brand-green/[0.07] to-transparent p-6
-                    transition-all duration-300 hover:-translate-y-1 hover:border-brand-green/50">
-          <div class="flex items-center gap-2 mb-5">
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-green text-gray-950 font-extrabold text-sm">3</span>
-            <span class="text-xs font-bold uppercase tracking-widest text-brand-green">Palier 3</span>
-          </div>
-          <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">Montant du transfert</p>
-          <p class="text-lg font-extrabold mb-5">2 500 – 5 000 <span class="text-sm font-medium text-gray-400">FCFA</span></p>
-          <div class="pt-5 border-t border-white/10">
-            <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Frais</p>
-            <p class="text-3xl font-extrabold text-brand-green">100 <span class="text-base font-semibold text-gray-400">FCFA</span></p>
-          </div>
-        </div>
-
-        <div class="group relative rounded-2xl border border-white/20 bg-gradient-to-b from-white/[0.08] to-transparent p-6
-                    transition-all duration-300 hover:-translate-y-1 hover:border-white/40">
-          <div class="flex items-center gap-2 mb-5">
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white text-gray-950 font-extrabold text-sm">4</span>
-            <span class="text-xs font-bold uppercase tracking-widest text-white">Palier 4</span>
-          </div>
-          <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-2">Montant du transfert</p>
-          <p class="text-lg font-extrabold mb-5">&gt; 5 000 <span class="text-sm font-medium text-gray-400">jusqu'à 30 000 FCFA</span></p>
-          <div class="pt-5 border-t border-white/10">
-            <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Frais</p>
-            <p class="text-3xl font-extrabold text-white">2 <span class="text-base font-semibold text-gray-400">% du montant</span></p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-10 rounded-2xl border border-white/10 bg-white/[0.02] p-5 sm:p-6
-                  flex items-start gap-4 max-w-3xl mx-auto">
-        <span class="flex-shrink-0 w-9 h-9 rounded-xl bg-brand-yellow/15 border border-brand-yellow/25
-                     flex items-center justify-center">
-          <svg class="w-4 h-4 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="9"/>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8h.01M11 12h1v4h1"/>
-          </svg>
-        </span>
-        <p class="text-sm text-gray-400 leading-relaxed">
-          <span class="text-white font-semibold">Bon à savoir :</span> le montant minimum d'un transfert est de
-          <span class="text-brand-yellow font-bold">100 FCFA</span> et le plafond est fixé à
-          <span class="text-brand-yellow font-bold">30 000 FCFA</span> par transaction.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===================== COMMENT ÇA MARCHE ===================== -->
-  <section id="fonctionnement" class="scroll-mt-24 py-20 sm:py-28">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
-      <div class="max-w-2xl mx-auto text-center mb-14">
-        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-3">Comment ça marche</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-          4 étapes, <span class="text-brand-green">c'est tout</span>
-        </h2>
-        <p class="text-gray-400 text-base sm:text-lg">
-          Aucune inscription compliquée, aucune file d'attente.
-        </p>
-      </div>
-
-      <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <li class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full
-                       bg-brand-orange text-gray-950 font-extrabold text-sm mb-4">1</span>
-          <h3 class="font-bold mb-2">Lancez la discussion</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Cliquez sur « Effectuer un transfert » : la conversation s'ouvre directement.
-          </p>
-        </li>
-
-        <li class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full
-                       bg-brand-yellow text-gray-950 font-extrabold text-sm mb-4">2</span>
-          <h3 class="font-bold mb-2">Indiquez votre numéro</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Renseignez le numéro à recharger ainsi que le montant souhaité.
-          </p>
-        </li>
-
-        <li class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full
-                       bg-brand-green text-gray-950 font-extrabold text-sm mb-4">3</span>
-          <h3 class="font-bold mb-2">Confirmez</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Validez la transaction en toute sécurité depuis votre téléphone.
-          </p>
-        </li>
-
-        <li class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full
-                       bg-white text-gray-950 font-extrabold text-sm mb-4">4</span>
-          <h3 class="font-bold mb-2">Recevez vos unités</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Les crédits arrivent directement sur le numéro indiqué. C'est terminé !
-          </p>
-        </li>
-
-      </ol>
-
-      <div class="text-center mt-12">
-        <button onclick="openBot('client')"
-                class="inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-400 text-gray-950
-                       font-bold py-3.5 px-8 rounded-full shadow-lg shadow-brand-orange/25
-                       transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-          Commencer maintenant
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DEVENIR GÉRANT ===================== -->
-  <section id="gerants" class="scroll-mt-24 py-20 sm:py-28 bg-gray-900/50 border-y border-white/5">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-        <div>
-          <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-3">Devenir Gérant</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-5">
-            Gagnez <span class="text-brand-green">10 FCFA</span> sur chaque transaction
-          </h2>
-          <p class="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
-            Enregistrez-vous comme gérant et percevez une commission sur chaque transfert
-            réalisé par les clients que vous parrainez.
-          </p>
-
-          <ul class="space-y-4 mb-10">
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-brand-green/15 border border-brand-green/30
-                           flex items-center justify-center">
-                <svg class="w-3 h-3 text-brand-green" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <span class="text-gray-300">10 FCFA reversés pour chaque transaction de vos filleuls</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-brand-green/15 border border-brand-green/30
-                           flex items-center justify-center">
-                <svg class="w-3 h-3 text-brand-green" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <span class="text-gray-300">Inscription 100 % en ligne, en quelques minutes</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-brand-green/15 border border-brand-green/30
-                           flex items-center justify-center">
-                <svg class="w-3 h-3 text-brand-green" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              <span class="text-gray-300">Des revenus passifs qui s'accumulent au fil des transferts</span>
-            </li>
-          </ul>
-
-          <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
-             class="inline-flex items-center gap-2 bg-brand-green hover:bg-green-400 text-gray-950
-                    font-bold py-4 px-8 rounded-full shadow-xl shadow-brand-green/25
-                    transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-green/40">
-            S'enregistrer comme gérant
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-        </div>
-
-        <div class="relative">
-          <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.15),transparent_65%)] animate-pulse-glow"></div>
-
-          <div class="animate-float rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02]
-                      backdrop-blur p-8 shadow-2xl shadow-black/40">
-            <div class="flex items-center justify-between mb-8">
-              <div>
-                <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Commissions</p>
-                <p class="text-sm text-gray-400 mt-1">Simulation gérant</p>
-              </div>
-              <span class="px-3 py-1 rounded-full bg-brand-green/15 border border-brand-green/30
-                           text-brand-green text-xs font-bold">Actif</span>
-            </div>
-
-            <div class="space-y-5">
-              <div>
-                <div class="flex justify-between text-sm mb-2">
-                  <span class="text-gray-400">50 transactions parrainées</span>
-                  <span class="font-bold text-white">500 FCFA</span>
-                </div>
-                <div class="h-2 rounded-full bg-white/5 overflow-hidden">
-                  <div class="h-full w-[35%] rounded-full bg-gradient-to-r from-brand-green to-brand-yellow"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-sm mb-2">
-                  <span class="text-gray-400">150 transactions parrainées</span>
-                  <span class="font-bold text-white">1 500 FCFA</span>
-                </div>
-                <div class="h-2 rounded-full bg-white/5 overflow-hidden">
-                  <div class="h-full w-[65%] rounded-full bg-gradient-to-r from-brand-yellow to-brand-orange"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-sm mb-2">
-                  <span class="text-gray-400">300 transactions parrainées</span>
-                  <span class="font-bold text-white">3 000 FCFA</span>
-                </div>
-                <div class="h-2 rounded-full bg-white/5 overflow-hidden">
-                  <div class="h-full w-full rounded-full bg-gradient-to-r from-brand-orange to-brand-green"></div>
-                </div>
-              </div>
-            </div>
-
-            <p class="mt-8 text-xs text-gray-500 leading-relaxed">
-              Exemple illustratif basé sur 10 FCFA par transaction parrainée.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== ESPACE GÉRANT ===================== -->
-  <section id="espace-gerant" class="scroll-mt-24 py-20 sm:py-28">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
-      <div class="max-w-2xl mx-auto text-center mb-14">
-        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-yellow mb-3">Espace Gérant</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-          Votre tableau de bord <span class="text-brand-yellow">gérant</span>
-        </h2>
-        <p class="text-gray-400 text-base sm:text-lg">
-          Vous êtes déjà gérant ? Accédez à votre espace pour gérer vos clients et vos transferts.
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-
-        <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6
-                    hover:border-brand-green/40 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1">
-          <div class="w-11 h-11 rounded-xl bg-brand-green/15 border border-brand-green/25
-                      flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 7a4 4 0 100 8 4 4 0 000-8zM19 8v6M22 11h-6"/>
-            </svg>
-          </div>
-          <h3 class="font-bold mb-2">Enregistrer un client</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Ajoutez un nouveau client à votre réseau en quelques secondes.
-          </p>
-        </div>
-
-        <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6
-                    hover:border-brand-yellow/40 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1">
-          <div class="w-11 h-11 rounded-xl bg-brand-yellow/15 border border-brand-yellow/25
-                      flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v22M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/>
-            </svg>
-          </div>
-          <h3 class="font-bold mb-2">Demander un retrait</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Retirez vos commissions accumulées quand vous le souhaitez.
-          </p>
-        </div>
-
-        <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6
-                    hover:border-brand-orange/40 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1">
-          <div class="w-11 h-11 rounded-xl bg-brand-orange/15 border border-brand-orange/25
-                      flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold mb-2">Effectuer un transfert</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Réalisez un transfert d'unités depuis votre compte gérant.
-          </p>
-        </div>
-
-        <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6
-                    hover:border-white/40 hover:bg-white/[0.05] transition-all duration-300 hover:-translate-y-1">
-          <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/20
-                      flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold mb-2">Suivre mon activité</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Consultez vos statistiques et l'historique de vos commissions.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="max-w-2xl mx-auto">
-        <div class="relative rounded-3xl border border-brand-yellow/20 bg-gradient-to-br from-brand-yellow/[0.07] to-transparent
-                    p-8 sm:p-10 text-center overflow-hidden">
-          <div class="pointer-events-none absolute inset-0 -z-10">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(250,204,21,0.15),transparent_65%)]"></div>
-          </div>
-
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-yellow/15 border border-brand-yellow/30
-                      flex items-center justify-center mb-5">
-            <svg class="w-7 h-7 text-brand-yellow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zM8 11V7a4 4 0 118 0v4"/>
-            </svg>
-          </div>
-
-          <h3 class="text-2xl font-extrabold mb-3">Accès gérant</h3>
-          <p class="text-gray-400 text-sm mb-7 max-w-md mx-auto">
-            Connectez-vous à votre espace sécurisé pour gérer votre activité,
-            enregistrer des clients et effectuer vos opérations.
-          </p>
-
-          <a href="https://allo-services-ci-chapchap.vercel.app?action=login"
-             class="inline-flex items-center gap-2 bg-brand-yellow hover:bg-yellow-300 text-gray-950
-                    font-bold py-4 px-8 rounded-full shadow-xl shadow-brand-yellow/25
-                    transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-yellow/40">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
-            </svg>
-            Accéder à mon espace
-          </a>
-
-          <p class="mt-5 text-xs text-gray-500">
-            Un identifiant et un mot de passe vous seront demandés dans la conversation.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===================== FAQ ===================== -->
-  <section id="faq" class="scroll-mt-24 py-20 sm:py-28 bg-gray-900/50 border-y border-white/5">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-
-      <div class="text-center mb-12">
-        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-brand-yellow mb-3">FAQ</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-          Questions <span class="text-brand-yellow">fréquentes</span>
-        </h2>
-        <p class="text-gray-400">Tout ce que vous devez savoir avant de commencer.</p>
-      </div>
-
-      <div class="space-y-3">
-
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/20">
-          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer">
-            <span class="font-semibold text-left">Combien coûtent les frais de transfert ?</span>
-            <svg class="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform duration-300 group-open:rotate-45"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
-            </svg>
-          </summary>
-          <div class="px-5 pb-5 text-sm text-gray-400 leading-relaxed">
-            Les frais dépendent du montant de votre transfert :
-            <ul class="mt-3 space-y-1.5">
-              <li>• De 100 à 499 FCFA → <span class="text-brand-yellow font-semibold">25 FCFA</span></li>
-              <li>• De 500 à 2 499 FCFA → <span class="text-brand-orange font-semibold">50 FCFA</span></li>
-              <li>• De 2 500 à 5 000 FCFA → <span class="text-brand-green font-semibold">100 FCFA</span></li>
-              <li>• Plus de 5 000 jusqu'à 30 000 FCFA → <span class="text-white font-semibold">2 % du montant</span></li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/20">
-          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer">
-            <span class="font-semibold text-left">Quels montants puis-je transférer ?</span>
-            <svg class="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform duration-300 group-open:rotate-45"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
-            </svg>
-          </summary>
-          <p class="px-5 pb-5 text-sm text-gray-400 leading-relaxed">
-            Le montant minimum est de <span class="text-white font-semibold">100 FCFA</span> et le montant maximum
-            de <span class="text-white font-semibold">30 000 FCFA</span> par transaction.
-          </p>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/20">
-          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer">
-            <span class="font-semibold text-left">Combien de temps prend un transfert d'unités ?</span>
-            <svg class="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform duration-300 group-open:rotate-45"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
-            </svg>
-          </summary>
-          <p class="px-5 pb-5 text-sm text-gray-400 leading-relaxed">
-            La plupart des transferts sont traités en quelques minutes. Le délai peut varier
-            selon l'opérateur, mais vous êtes guidé à chaque étape de la conversation.
-          </p>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/20">
-          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer">
-            <span class="font-semibold text-left">Comment devenir gérant ?</span>
-            <svg class="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform duration-300 group-open:rotate-45"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
-            </svg>
-          </summary>
-          <p class="px-5 pb-5 text-sm text-gray-400 leading-relaxed">
-            Cliquez sur « Devenir Gérant » puis remplissez le formulaire d'enregistrement en ligne.
-            Une fois validé, vous recevez votre propre lien de parrainage à partager.
-          </p>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/20">
-          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer">
-            <span class="font-semibold text-left">Comment accéder à mon espace gérant ?</span>
-            <svg class="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform duration-300 group-open:rotate-45"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
-            </svg>
-          </summary>
-          <p class="px-5 pb-5 text-sm text-gray-400 leading-relaxed">
-            Une fois votre inscription validée, cliquez sur « Espace gérant » (dans le menu Gérants
-            ou dans la section dédiée). Identifiez-vous avec vos identifiants pour accéder à votre
-            tableau de bord.
-          </p>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/20">
-          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer">
-            <span class="font-semibold text-left">Comment suis-je rémunéré en tant que gérant ?</span>
-            <svg class="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform duration-300 group-open:rotate-45"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
-            </svg>
-          </summary>
-          <p class="px-5 pb-5 text-sm text-gray-400 leading-relaxed">
-            Vous touchez 10 FCFA pour chaque transaction effectuée par un client que vous avez parrainé.
-            Les modalités de versement vous sont communiquées lors de votre inscription.
-          </p>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-white/20">
-          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer">
-            <span class="font-semibold text-left">Ai-je besoin d'une application à installer ?</span>
-            <svg class="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform duration-300 group-open:rotate-45"
-                 fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/>
-            </svg>
-          </summary>
-          <p class="px-5 pb-5 text-sm text-gray-400 leading-relaxed">
-            Non. Tout se passe directement dans votre navigateur, depuis votre téléphone
-            ou votre ordinateur. Aucun téléchargement n'est nécessaire.
-          </p>
-        </details>
-
-      </div>
     </div>
   </section>
 
@@ -968,37 +361,35 @@ tailwind.config = {
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="relative overflow-hidden rounded-3xl border border-white/10
                   bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-10 sm:p-16 text-center">
-
         <div class="pointer-events-none absolute inset-0 -z-10">
           <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(251,146,60,0.20),transparent_65%)]"></div>
           <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_100%,rgba(74,222,128,0.12),transparent_60%)]"></div>
         </div>
 
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-5">
-          Prêt à recharger<br class="hidden sm:block">
+          Une question,<br class="hidden sm:block">
           <span class="bg-gradient-to-r from-brand-yellow to-brand-orange bg-clip-text text-transparent">
-            en quelques secondes ?
+            une idée à nous partager ?
           </span>
         </h2>
 
         <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto mb-10">
-          Lancez votre premier transfert maintenant, ou rejoignez notre réseau de gérants.
+          Écris-nous. On répond à tous les messages.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
-          <button onclick="openBot('client')"
-                  class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-400
-                         text-gray-950 font-bold py-4 px-8 rounded-full
-                         shadow-xl shadow-brand-orange/25 transition-all duration-300
-                         hover:-translate-y-1 hover:shadow-brand-orange/40 cursor-pointer">
-            Effectuer un transfert
-          </button>
-
-          <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription"
+          <a href="contact.html"
+             class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-400
+                    text-gray-950 font-bold py-4 px-8 rounded-full
+                    shadow-xl shadow-brand-orange/25 transition-all duration-300
+                    hover:-translate-y-1 hover:shadow-brand-orange/40">
+            Nous contacter
+          </a>
+          <a href="chapchap.html"
              class="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5
                     hover:bg-white/10 hover:border-brand-green/40 text-white font-bold
                     py-4 px-8 rounded-full transition-all duration-300 hover:-translate-y-1">
-            Devenir Gérant
+            Voir CHAPCHAP
           </a>
         </div>
       </div>
@@ -1012,7 +403,6 @@ tailwind.config = {
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-
       <div class="lg:col-span-2">
         <div class="flex items-center gap-2.5 mb-4">
           <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-yellow via-brand-orange to-brand-green
@@ -1021,120 +411,41 @@ tailwind.config = {
             <span class="text-brand-yellow">Allô</span><span class="text-brand-orange">Services</span><span class="text-brand-green">CI</span>
           </span>
         </div>
-        <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
-          Transfert d'unités téléphoniques simple, rapide et transparent,
-          partout en Côte d'Ivoire.
+        <p class="text-sm text-gray-500 leading-relaxed max-w-sm mb-6">
+          Nous créons des applications simples et utiles pour le quotidien des Ivoiriens.
         </p>
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="tel:+2250508445683" class="text-gray-400 hover:text-brand-orange transition">📞 05 08 44 56 83</a>
+          <a href="https://wa.me/2250508445683" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-green transition">💬 WhatsApp</a>
+          <a href="mailto:alloservices.ci@gmail.com" class="text-gray-400 hover:text-brand-yellow transition">✉️ Email</a>
+        </div>
       </div>
 
       <div>
-        <h3 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Navigation</h3>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Entreprise</h3>
         <ul class="space-y-2.5 text-sm">
-          <li><a href="#services" class="text-gray-400 hover:text-brand-orange transition">Services</a></li>
-          <li><a href="#tarifs" class="text-gray-400 hover:text-brand-orange transition">Tarifs</a></li>
-          <li><a href="#fonctionnement" class="text-gray-400 hover:text-brand-orange transition">Comment ça marche</a></li>
-          <li><a href="#gerants" class="text-gray-400 hover:text-brand-orange transition">Devenir gérant</a></li>
-          <li><a href="#espace-gerant" class="text-gray-400 hover:text-brand-orange transition">Espace gérant</a></li>
-          <li><a href="#faq" class="text-gray-400 hover:text-brand-orange transition">FAQ</a></li>
+          <li><a href="a-propos.html" class="text-gray-400 hover:text-brand-orange transition">À propos</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-brand-orange transition">Contact</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="text-sm font-bold uppercase tracking-widest text-white mb-4">Actions</h3>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-white mb-4">CHAPCHAP</h3>
         <ul class="space-y-2.5 text-sm">
-          <li>
-            <button onclick="openBot('client')" class="text-gray-400 hover:text-brand-orange transition cursor-pointer">
-              Effectuer un transfert
-            </button>
-          </li>
-          <li>
-            <a href="https://allo-services-ci-chapchap.vercel.app?action=inscription" class="text-gray-400 hover:text-brand-green transition">
-              Devenir gérant
-            </a>
-          </li>
-          <li>
-            <a href="https://allo-services-ci-chapchap.vercel.app?action=login" class="text-gray-400 hover:text-brand-yellow transition">
-              Espace gérant
-            </a>
-          </li>
+          <li><a href="chapchap.html" class="text-gray-400 hover:text-brand-orange transition">Découvrir</a></li>
+          <li><a href="chapchap.html#tarifs" class="text-gray-400 hover:text-brand-orange transition">Tarifs</a></li>
+          <li><a href="chapchap.html#faq" class="text-gray-400 hover:text-brand-orange transition">FAQ</a></li>
+          <li><a href="https://allo-services-ci-chapchap.vercel.app/v2/" class="text-brand-orange hover:underline transition font-semibold">Utiliser CHAPCHAP</a></li>
         </ul>
       </div>
     </div>
 
     <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-xs text-gray-600">
-        &copy; <span id="year">2026</span> Allô Services CI. Tous droits réservés.
-      </p>
-      <p class="text-xs text-gray-600">
-        Conçu pour la Côte d'Ivoire 🇨🇮
-      </p>
+      <p class="text-xs text-gray-600">&copy; <span id="year">2026</span> Allô Services CI. Tous droits réservés.</p>
+      <p class="text-xs text-gray-600">Conçu pour la Côte d'Ivoire 🇨🇮</p>
     </div>
   </div>
 </footer>
-
-<!-- ===================== SCRIPT : Config bots + openBot ===================== -->
-<script>
-  // ============================================================
-  // CONFIGURATION DES BOTS
-  // ============================================================
-  window.BOT_URLS = {
-    client: 'https://typebot.co/chapchap-bot-client-1-35bwv89',
-    // 'inscription' et 'gerant' sont désormais gérés par la PWA
-  };
-
-  // ============================================================
-  // FONCTION openBot
-  // - inscription → redirige vers la PWA (mode inscription)
-  // - gerant → redirige vers la PWA (connexion)
-  // - client → ouvre la bulle Typebot (avec pré-remplissage du montant)
-  // ============================================================
-  window.openBot = function (bot) {
-
-    // ── Devenir gérant → PWA en mode inscription
-    if (bot === 'inscription') {
-      window.location.href = "https://allo-services-ci-chapchap.vercel.app?action=inscription";
-      return;
-    }
-
-    // ── Espace gérant → PWA (écran de connexion)
-    if (bot === 'gerant') {
-      window.location.href = "https://allo-services-ci-chapchap.vercel.app?action=login";
-      return;
-    }
-
-    // ── Client → bulle Typebot
-    if (bot === 'client') {
-      const amountInput = document.getElementById('sim-amount');
-      const raw = amountInput ? parseInt(amountInput.value, 10) : NaN;
-
-      // Purge de la session Typebot en cache : sinon `setPrefilledVariables`
-      // est ignoré (le SDK mémorise `typebot-<id>-initialChatReply` et `-progress`).
-      try {
-        for (const suffix of ['initialChatReply', 'progress']) {
-          const key = 'typebot-chapchap-bot-client-1-35bwv89-' + suffix;
-          sessionStorage.removeItem(key);
-          localStorage.removeItem(key);
-        }
-      } catch (e) {}
-
-      if (typeof Typebot !== 'undefined' && Typebot.open) {
-        if (!isNaN(raw) && raw >= 100 && raw <= 30000) {
-          try {
-            Typebot.setPrefilledVariables({ montant: raw });
-          } catch (e) {
-            console.warn('[openBot] Préremplissage impossible :', e);
-          }
-        }
-        Typebot.open();
-      } else {
-        window.open(window.BOT_URLS.client, '_blank', 'noopener');
-      }
-      return;
-    }
-
-    console.warn('[openBot] Bot inconnu :', bot);
-  };
-</script>
 
 <!-- ===================== SCRIPT : Menu + Animations ===================== -->
 <script>
@@ -1154,7 +465,7 @@ tailwind.config = {
   window.toggleMenu = toggleMenu;
 
   menuBtn.addEventListener('click', () => toggleMenu());
-  mobileNav.querySelectorAll('a:not([href^="#"])').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+  mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleMenu(false); });
 
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -1168,116 +479,9 @@ tailwind.config = {
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
-  document.querySelectorAll('section > div > *, article, details').forEach(el => {
-    if (!el.classList.contains('animate-fade-up')) {
-      el.style.opacity = '0';
-      observer.observe(el);
-    }
+  document.querySelectorAll('section > div > *, article').forEach(el => {
+    if (!el.classList.contains('animate-fade-up')) { el.style.opacity = '0'; observer.observe(el); }
   });
 </script>
-
-<!-- ===================== SCRIPT : Simulateur de frais ===================== -->
-<script>
-  (function () {
-    const input = document.getElementById('sim-amount');
-    const feeEl = document.getElementById('sim-fee');
-    const totalEl = document.getElementById('sim-total');
-    const msgEl = document.getElementById('sim-message');
-    const result = document.getElementById('sim-result');
-
-    if (!input) return;
-
-    const MIN = 100;
-    const MAX = 30000;
-
-    function calcFee(amount) {
-      if (amount < MIN || amount > MAX) return null;
-      if (amount <= 499) return { fee: 25, color: 'text-brand-yellow', label: 'Palier 1' };
-      if (amount <= 2499) return { fee: 50, color: 'text-brand-orange', label: 'Palier 2' };
-      if (amount <= 5000) return { fee: 100, color: 'text-brand-green', label: 'Palier 3' };
-      return {
-        fee: Math.round(amount * 0.02),
-        color: 'text-white',
-        label: 'Palier 4 — 2 % du montant'
-      };
-    }
-
-    function fmt(n) {
-      return n.toLocaleString('fr-FR').replace(/\u202f|\u00a0/g, ' ') + ' FCFA';
-    }
-
-    function update() {
-      const raw = parseInt(input.value, 10);
-      const amount = isNaN(raw) ? 0 : raw;
-
-      if (!amount) {
-        feeEl.textContent = '—';
-        totalEl.textContent = '—';
-        feeEl.className = 'text-3xl sm:text-4xl font-extrabold text-brand-orange transition-colors';
-        msgEl.textContent = 'Saisissez un montant entre 100 et 30 000 FCFA pour voir les frais appliqués.';
-        msgEl.className = 'mt-4 text-xs text-gray-500 leading-relaxed';
-        result.className = 'mt-6 rounded-2xl border border-white/10 bg-gray-950/60 p-5 transition-all duration-300';
-        return;
-      }
-
-      const res = calcFee(amount);
-
-      if (!res) {
-        feeEl.textContent = '—';
-        totalEl.textContent = '—';
-        feeEl.className = 'text-3xl sm:text-4xl font-extrabold text-red-400 transition-colors';
-        msgEl.textContent = amount < MIN
-          ? `Le montant minimum est de ${fmt(MIN)}.`
-          : `Le montant maximum est de ${fmt(MAX)} par transaction.`;
-        msgEl.className = 'mt-4 text-xs text-red-400 leading-relaxed font-semibold';
-        result.className = 'mt-6 rounded-2xl border border-red-500/30 bg-red-500/[0.06] p-5 transition-all duration-300';
-        return;
-      }
-
-      const total = amount + res.fee;
-      feeEl.textContent = fmt(res.fee);
-      totalEl.textContent = fmt(total);
-      feeEl.className = `text-3xl sm:text-4xl font-extrabold ${res.color} transition-colors`;
-      msgEl.innerHTML = `<span class="text-brand-orange font-semibold">${res.label}</span> — Pour un transfert de ${fmt(amount)}, les frais sont de ${fmt(res.fee)}.`;
-      msgEl.className = 'mt-4 text-xs text-gray-400 leading-relaxed';
-      result.className = 'mt-6 rounded-2xl border border-brand-orange/30 bg-brand-orange/[0.05] p-5 transition-all duration-300';
-    }
-
-    input.addEventListener('input', update);
-
-    document.querySelectorAll('.sim-preset').forEach(btn => {
-      btn.addEventListener('click', () => {
-        input.value = btn.dataset.preset;
-        update();
-        input.focus();
-      });
-    });
-
-    input.addEventListener('keydown', (e) => {
-      if (['e', 'E', '+', '-', '.', ','].includes(e.key)) e.preventDefault();
-    });
-
-    update();
-  })();
-</script>
-
-<!-- ===================== SCRIPT : Typebot (bulle = bot client) ===================== -->
-<script type="module">
-  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
-
-  window.Typebot = Typebot;
-
-  Typebot.initBubble({
-    typebot: "chapchap-bot-client-1-35bwv89",
-    theme: {
-      button: {
-        backgroundColor: "#DE8031",
-        customIconSrc:
-          "https://allo-services-ci-chapchap.vercel.app/icons/icon-192.png",
-      },
-    },
-  });
-</script>
-
 </body>
 </html>
